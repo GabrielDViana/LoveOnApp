@@ -28,14 +28,17 @@
           </div>
         </div>
         <div class="distance">
-        </br>
-          <span class="labels">Data de nascimento:</br></span>
-          <ionic-datepicker idate="currentDate" ng-required="true"disablepreviousdates="true"  ng-click="openDatePicker()">
-            <button class="button button-block icon-right ion-calendar" > {{ currentDate | date:'dd/MM/yy' }}</button>
-          </ionic-datepicker>
+          <span class="labels"></span>
+          <span class="labels">Aniversário:</br></span>
 
+          <label class="item item-input inputs-register">
+            <input name="birthday" type="date" placeholder="yyyy-MM-dd"
+              min="1900-01-01" max="1998-12-31" ng-model='user.birthday' ng-required="true">
+          </label>
           <div class="errors">
-            <p ng-show="currentDate.$error.required">Data de nascimento é necessária</p>
+            <p ng-show="testForm.birthday.$error.required">Aniversário é necessário</p>
+            <p ng-show="testForm.birthday.$error.min">Aniversário invalido</p>
+            <p ng-show="testForm.birthday.$error.max">Aniversário invalido</p>
           </div>
         </div>
         <div class="distance">

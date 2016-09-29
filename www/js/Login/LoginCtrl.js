@@ -382,7 +382,6 @@ angular.module('starter')
     // });
     user.avatar = $rootScope.user.avatar;
     user.gallery = $rootScope.user.gallery;
-    user.birthday = $scope.currentDate;
     factoryUpdate.update({
       token: serviceLogin.getUser().token
     }, {
