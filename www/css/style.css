@@ -752,6 +752,14 @@ a,
   border-radius: 50%;
   width: 120px; }
 
+  .location-profiles{
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    height: 180px;
+    width: 100%;
+  }
+
 /* List: Gallery
 ==================================*/
 .list.half {

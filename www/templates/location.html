@@ -12,11 +12,13 @@
         <div class="row" ng-repeat="user in loc.users" ng-if="$index % 2 === 0">
             <div class="col col-50" ng-if="$index < loc.users.length">
                 <span class="eai" ng-if="loc.users[$index].status"></span>
-                <img ng-src="data:image/jpeg;base64,{{loc.users[$index].avatar}}" width="100%" ng-controller="UsersCtrl" ng-click="viewUser(loc.users[$index].token)" on-hold="addInteraction(loc.users[$index])"/>
+                <div class="location-profiles" style="background-image: url('data:image/jpeg;base64,{{loc.users[$index].avatar}}');" ng-controller="UsersCtrl" ng-click="viewUser(loc.users[$index].token)" on-hold="addInteraction(loc.users[$index])"></div>
+                <!-- <img ng-src="data:image/jpeg;base64,{{loc.users[$index].avatar}}" width="100%" ng-controller="UsersCtrl" ng-click="viewUser(loc.users[$index].token)" on-hold="addInteraction(loc.users[$index])"/> -->
             </div>
             <div class="col col-50" ng-if="$index + 1 < loc.users.length">
                 <span class="eai" ng-if="loc.users[$index + 1].status"></span>
-                <img ng-src="data:image/jpeg;base64,{{loc.users[$index + 1].avatar}}" width="100%" ng-controller="UsersCtrl" ng-click="viewUser(loc.users[$index + 1].token)" on-hold="addInteraction(loc.users[$index + 1])"/>
+                <div class="location-profiles" style="background-image: url('data:image/jpeg;base64,{{loc.users[$index + 1].avatar}}');" ng-controller="UsersCtrl" ng-click="viewUser(loc.users[$index + 1].token)" on-hold="addInteraction(loc.users[$index + 1])"></div>
+                <!-- <img ng-src="data:image/jpeg;base64,{{loc.users[$index + 1].avatar}}" width="100%" ng-controller="UsersCtrl" ng-click="viewUser(loc.users[$index + 1].token)" on-hold="addInteraction(loc.users[$index + 1])"/> -->
             </div>
 
         </div>
