@@ -7,7 +7,7 @@ angular.module('starter')
   $scope.noLocationAlert = function() {
     $ionicPopup.alert({
       title: 'Verifique seu GPS!',
-      template: 'Por favor, ligue seu GPS para que possamos mostrar os locais próximos. Ou verifique se está próximo de algum dos locais disponiveis na lista.'
+      template: 'Por favor, ligue seu GPS para que possamos mostrar os locais próximos. Ou verifique se está próximo de algum dos locais disponíveis.'
     });
   }
 

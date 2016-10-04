@@ -7,21 +7,6 @@ angular.module('starter')
   ionicDatePicker) {
 
 
-  $scope.currentDate = "";
-  var birthday = {
-      callback: function (val) {
-        console.log('Return value from the datepicker popup is : ' + val, $scope.currentDate = new Date(val));
-      },
-      from: new Date(1900, 1, 1),
-      to: new Date(1998, 9, 1),
-      inputDate: new Date(1998, 1, 1),
-      closeOnSelect: true,
-      templateType: 'popup'
-    };
-
-  $scope.openDatePicker = function(){
-    ionicDatePicker.openDatePicker(birthday);
-  };
 
   $scope.galleryHelp = function () {
     $ionicPopup.alert({
@@ -90,7 +75,7 @@ angular.module('starter')
               authData.facebook.id,
               authData.facebook.cachedUserProfile.gender,
               $scope.fbimage,
-              authData.facebook.cachedUserProfile.birthday
+              null
             );
             console.log("Usr:", serviceRegisterSocial.getUser());
             factoryRegister.save(serviceRegisterSocial.getUser(), function(user) {
@@ -303,7 +288,7 @@ angular.module('starter')
       $ionicLoading.hide();
       $ionicPopup.alert({
         title: 'Erro!',
-        template: 'Falha ao carregar dados, verifique sua conta já foi criada com o '+social
+        template: 'Falha ao carregar dados, verifique sua conexão ou tente novamente mais tarde'
       });
     })
   }
