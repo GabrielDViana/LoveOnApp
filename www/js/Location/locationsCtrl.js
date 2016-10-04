@@ -4,6 +4,13 @@ angular.module('starter')
   $rootScope, $ionicLoading, serviceLogin, factoryLocations, factoryCheckins,
   factoryLocation, factoryCheckin, $cordovaGeolocation, $ionicPlatform) {
 
+  $scope.noLocationAlert = function() {
+    $ionicPopup.alert({
+      title: 'Verifique seu GPS!',
+      template: 'Por favor, ligue seu GPS para que possamos mostrar os locais próximos. Ou verifique se está próximo de algum dos locais disponiveis na lista.'
+    });
+  }
+
   $scope.allLocations = function() {
     $ionicLoading.show({
       template: 'Carregando... <ion-spinner icon="android"></ion-spinner>'
@@ -110,10 +117,10 @@ angular.module('starter')
            console.log(position.coords);
        }, function(err) {
            $ionicLoading.hide();
-           $ionicPopup.alert({
-             title: 'GPS não disponivel!',
-             template: 'Por favor, ligue seu GPS para que possamos mostrar os locais próximos.'
-           });
+          //  $ionicPopup.alert({
+          //    title: 'GPS não disponivel!',
+          //    template: 'Por favor, ligue seu GPS para que possamos mostrar os locais próximos.'
+          //  });
            console.log(err);
        });
    });

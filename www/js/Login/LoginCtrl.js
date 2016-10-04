@@ -407,8 +407,8 @@ angular.module('starter')
         sourceType: srcType,
         encodingType: Camera.PictureSourceType.CAMERA,
         mediaType: Camera.MediaType.PICTURE,
-        allowEdit: true,
-        correctOrientation: true //Corrects Android orientation quirks
+        // allowEdit: true,
+        // correctOrientation: true //Corrects Android orientation quirks
       }
       return options;
     }
@@ -472,7 +472,7 @@ angular.module('starter')
         sourceType: srcType,
         encodingType: Camera.PictureSourceType.CAMERA,
         mediaType: Camera.MediaType.PICTURE,
-        allowEdit: true
+        // allowEdit: true
       }
       return options;
     }
@@ -633,8 +633,8 @@ angular.module('starter')
         sourceType: srcType,
         encodingType: Camera.PictureSourceType.PHOTOLIBRARY,
         mediaType: Camera.MediaType.PICTURE,
-        allowEdit: true,
-        correctOrientation: true //Corrects Android orientation quirks
+        // allowEdit: true,
+        // correctOrientation: true //Corrects Android orientation quirks
       }
       return options;
     }

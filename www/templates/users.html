@@ -6,38 +6,16 @@
 
     <div class="list">
       <ion-list ng-repeat="blocked in user.blocks">
-        <div class="item item-avatar item-button-right">
+        <div class="item item-avatar item-button-right ">
           <img src="data:image/jpeg;base64,{{blocked.avatar}}" >
           <h2>{{blocked.name}}</h2>
           <p>{{blocked.description}}</p>
           <button class="button button-positive" ng-click="unblockUser(blocked,$index);">
-            <i class="icon ion-chatbubbles" ></i>
+            <i class="icon ion-unlocked" ></i>
           </button>
         </div>
       </ion-list>
     </div>
   </ion-content>
-  <ion-tabs  class="tabs-light tabs-icon-only">
 
-    <ion-tab ng-controller="locationsCtrl" icon-on="ion-compass"
-      icon-off="ion-compass" ng-click="allLocations()">
-    </ion-tab>
-
-    <ion-tab icon-on="ion-ios-chatbubble" icon-off="ion-ios-chatbubble-outline"
-      ui-sref="app.matches" ng-controller="LoginCtrl" ng-click="reloadUser('app.matches')">
-    </ion-tab>
-
-    <ion-tab icon-on="ion-ios-camera-outline" icon-off="ion-ios-camera-outline"
-      ng-controller="LoginCtrl"ng-click="modal.show()" >
-    </ion-tab>
-
-    <ion-tab icon-on="ion-ios-bell" icon-off="ion-ios-bell-outline"
-      ui-sref="app.notifications" ng-controller="LoginCtrl" ng-click="reloadUser('app.notifications')">
-    </ion-tab>
-
-    <ion-tab icon-on="ion-ios-person" icon-off="ion-ios-person-outline"
-      ui-sref="app.profile">
-    </ion-tab>
-
-  </ion-tabs>
 </ion-view>

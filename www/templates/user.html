@@ -7,7 +7,7 @@
       </a>
     </ion-nav-buttons>
   </ion-nav-bar>
-    <ion-content>
+    <ion-content overflow-scroll="false">
         <div class="hero slide-up" style="background-image: url('data:image/jpeg;base64,{{userp.background}}');">
             <div class="blabla">
                 <div class="avatar" style="background-image: url('data:image/jpeg;base64,{{userp.avatar}}');"></div>
@@ -46,7 +46,7 @@
           Não há fotos
         </button>
         <ion-gallery ion-gallery-items="userpgallery" ion-gallery-toggle="false"></ion-gallery>
-        
+
     </ion-content>
     <ion-tabs ng-if="isMatched" class="tabs-light tabs-icon-only">
 

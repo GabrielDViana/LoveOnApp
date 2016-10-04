@@ -2,7 +2,7 @@
   <ion-nav-bar class="bar bar-light">
     <ion-nav-back-button ></ion-nav-back-button>
   </ion-nav-bar>
-  <ion-content class="chat-message">
+  <ion-content overflow-scroll="false" class="chat-message">
     <refresher></refresher>
 
     <div ng-repeat="message in messages | orderBy:'created_at'">

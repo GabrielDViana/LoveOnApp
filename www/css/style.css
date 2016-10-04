@@ -665,6 +665,9 @@ a,
 
 .list .item {
   border: none;
+  border-radius: 6px;
+  width: 99%;
+  margin-left: 0.5%;
   /*
     padding-left: 16px;
     padding-right: 16px;

@@ -1,7 +1,7 @@
 <ion-view view-title="Informe onde você está">
   <ion-nav-bar class="bar bar-light">
   </ion-nav-bar>
-  <ion-content ng-init="allLocations()">
+  <ion-content>
 
     <label ng-if="locations.length > 4" class="item item-input">
       <i class="icon ion-search placeholder-icon"></i>
@@ -20,7 +20,9 @@
         Mostrar mais
       </button>
     </div>
-    <button ng-if="locations.length == 0" ng-controller="locationsCtrl" ng-click="allLocations()"class=" btnPlus font button button-block">
+    <button ng-if="locations.length == 0" ng-controller="locationsCtrl"
+      ng-click="allLocations();noLocationAlert();"
+      class=" btnPlus font button button-block icon icon-right ion-ios-help-outline">
         Não há locais disponíveis onde você está
     </button>
   </ion-content>
