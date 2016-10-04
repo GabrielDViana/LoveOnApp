@@ -69,14 +69,24 @@
           <div class="col col-50">
             <span class="labels"></br></span>
             <label class="item item-input inputs-register">
-              <input placeholder="Altura" type="number" step="0.01" ng-model='user.height'>
+              <input name="height" placeholder="Altura" type="number" step="0.01" ng-model='user.height' ng-required="true" min="1" max="3">
             </label>
+            <div class="errors">
+              <p ng-show="testForm.height.$error.required">Altura é necessário</p>
+              <p ng-show="testForm.height.$error.minlength">Altura está baixa</p>
+              <p ng-show="testForm.height.$error.maxlength">Altura está alta</p>
+            </div>
           </div>
           <div class="col col-50">
             <span class="labels"></br></span>
             <label class="item item-input inputs-register">
-              <input placeholder="Peso" type="number" step="0.01" ng-model='user.weight'>
+              <input name="weight" placeholder="Peso" type="number" step="0.01" ng-model='user.weight' ng-required="true" min="40" max="300">
             </label>
+            <div class="errors">
+              <p ng-show="testForm.weight.$error.required">Peso é necessário</p>
+              <p ng-show="testForm.weight.$error.minlength">Peso está baixo</p>
+              <p ng-show="testForm.weight.$error.maxlength">Peso está alto</p>
+            </div>
           </div>
         </div>
         <div class="distance">
