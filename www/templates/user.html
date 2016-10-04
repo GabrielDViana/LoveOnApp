@@ -1,20 +1,20 @@
 <ion-view>
-  <ion-nav-bar class="bar bar-light">
-    <ion-nav-back-button ></ion-nav-back-button>
-    <ion-nav-buttons side="right">
-      <a class="tab-item more-button" ng-controller="UsersCtrl"ng-click="popover.show($event)">
-          <i class="icon ion-android-more-vertical"></i>
-      </a>
-    </ion-nav-buttons>
-  </ion-nav-bar>
     <ion-content overflow-scroll="false">
+      <ion-nav-bar class="bar bar-header nao bar-light">
+        <ion-nav-back-button style="color:white"></ion-nav-back-button>
+          <h1 class="title"></h1>
+          <ion-nav-buttons side="right">
+              <button class="button-icon icon ion-gear-b" style="color: white" ng-controller="LoginCtrl"ng-click="popover.show($event)">
+              </button>
+          </ion-nav-buttons>
+        </ion-nav-bar>
         <div class="hero slide-up" style="background-image: url('data:image/jpeg;base64,{{userp.background}}');">
             <div class="blabla">
                 <div class="avatar" style="background-image: url('data:image/jpeg;base64,{{userp.avatar}}');"></div>
 
             </div>
             <div class="light1">{{userp.name}}</div>
-            <h4><div class="meucu">{{userp.age}} anos</div></h4>
+            <div class="meucu">{{userp.age}} anos</div>
             <div class="description">{{userp.description}}</div>
             <div class="district">{{userp.district}}, {{userp.city}}</div>
             <div class="tabs tabs-light tabs-icon-only static ">
