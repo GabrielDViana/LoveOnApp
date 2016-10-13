@@ -74,8 +74,7 @@ angular.module('starter')
               authData.facebook.email,
               authData.facebook.id,
               authData.facebook.cachedUserProfile.gender,
-              $scope.fbimage,
-              null
+              $scope.fbimage
             );
             console.log("Usr:", serviceRegisterSocial.getUser());
             factoryRegister.save(serviceRegisterSocial.getUser(), function(user) {
