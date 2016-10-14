@@ -70,7 +70,8 @@
 .description {
   position: absolute;
   top: 227px;
-  margin-left: 10%
+  margin-left: 10%;
+  text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
 .eai {
@@ -250,6 +251,7 @@
   position: absolute;
   top: 46px;
   left:135px;
+  text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
 .man-class {
@@ -272,12 +274,14 @@
   position: relative;
   top: 0px;
   left:133px;
+  text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
 .district {
   position: absolute;
   top: 155px;
   margin-left: 155px;
+  text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
 .blabla {
