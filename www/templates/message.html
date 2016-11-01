@@ -6,7 +6,7 @@
     <refresher></refresher>
 
     <div ng-repeat="message in messages | orderBy:'created_at'">
-      <div class="chat-bubble left" ng-if="message.email !== user.email">
+      <div class="chat-bubble left" ng-if="message.token !== user.token">
         <div class="message" ng-bind-html="message.content | nl2br" autolinker>
           {{message.content}}
         </div>
@@ -16,7 +16,7 @@
         </div>
 
       </div>
-      <div class="chat-bubble right" ng-if="message.email === user.email">
+      <div class="chat-bubble right" ng-if="message.token === user.token">
         <div class="message" ng-bind-html="message.content | nl2br" autolinker>
           {{message.content}}
         </div>

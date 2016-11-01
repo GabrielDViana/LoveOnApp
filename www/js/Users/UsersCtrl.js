@@ -80,7 +80,7 @@ angular.module('starter')
       created_by: this.username,
       content: this.newMessage,
       created_at: Date.now(),
-      email: this.user.email
+      token: this.user.token
     });
     this.newMessage = "";
 
