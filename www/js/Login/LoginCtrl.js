@@ -150,7 +150,7 @@ angular.module('starter')
                 $scope.loginEmail(user, "Facebook");
                 $ionicLoading.hide();
               });
-            }, 1500);
+            }, 3500);
           }
         }, {
           remember: "sessionOnly",
@@ -372,6 +372,7 @@ angular.module('starter')
       user: user
     }, function(user) {
       $ionicLoading.hide();
+      $rootScope.user = user;
       console.log(user);
     }, function(error) {
       $ionicLoading.hide();

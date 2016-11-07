@@ -42,7 +42,7 @@
             </div>
         </div>
         <span class="labels"></br></span>
-        <button ng-if="!userp.gallery" class=" btnPlus font button button-block">
+        <button ng-if="userp.gallery.length == 0" class=" btnPlus font button button-block">
           Não há fotos
         </button>
         <ion-gallery ion-gallery-items="userpgallery" ion-gallery-toggle="false"></ion-gallery>
