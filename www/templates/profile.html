@@ -7,7 +7,13 @@
               </button>
           </ion-nav-buttons>
         </ion-nav-bar>
-        <div class="hero slide-up" style="background-image: url('data:image/jpeg;base64,{{user.background}}');">
+        <div class="hero slide-up" style="background-image: url('data:image/jpeg;base64,{{user.background}}');
+
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px); z-index:-1">
             <div class="blabla">
                 <div class="avatar" style="background-image: url('data:image/jpeg;base64,{{user.avatar}}');"></div>
 
