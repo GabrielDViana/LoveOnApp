@@ -48,7 +48,7 @@
           <img ng-src="{{img}}"/>
         </p> -->
         <!-- <a ui-sref="app.editprofile">Cadastre-se</a> -->
-        <button ng-if="!user.gallery" class=" btnPlus font button button-block">
+        <button ng-if="user.gallery.length == 0" class=" btnPlus font button button-block">
           Não há fotos
         </button>
         <ion-gallery ion-gallery-items="galleryitems" ion-gallery-toggle="false"></ion-gallery>
