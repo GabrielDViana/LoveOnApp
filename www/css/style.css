@@ -11,6 +11,14 @@
   width: 100%;
 }
 
+.mask {
+  position:absolute;
+  top:0;
+  left:0;
+  background:url('../img/overlay_mask.png') 0 0 no-repeat;
+  z-index: 1;
+}
+
 .modal-init {
   min-height: 40vh;
   height: 40vh;
