@@ -1,12 +1,28 @@
 angular.module('starter', ['ionic', 'firebase', 'ngResource', 'ngCordova',
   'ionMdInput', 'ion-datetime-picker', 'ion-gallery', 'nl2br', 'ionic-datepicker'])
 
-//.constant('URL', 'http://localhost:3000')
+// .constant('URL', 'http://localhost:3000')
 // .constant('URL', 'http://417390bd.ngrok.io')
  .constant('URL', 'http://loversappserver.herokuapp.com')
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $cordovaGeolocation, $rootScope, $ionicPopup) {
   $ionicPlatform.ready(function() {
+     var posOptions = {
+         enableHighAccuracy: true,
+         timeout: 3000,
+         maximumAge: 0
+     };
+     $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+         $rootScope.lat  = position.coords.latitude;
+         $rootScope.long = position.coords.longitude;
+         console.log(position.coords);
+     }, function(err) {
+         $ionicPopup.alert({
+           title: 'GPS não disponivel!',
+           template: 'Por favor, ligue seu GPS para que possamos mostrar os locais próximos.'
+         });
+         console.log(err);
+     });
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)

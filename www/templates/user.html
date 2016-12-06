@@ -13,10 +13,12 @@
                 <div class="avatar" style="background-image: url('data:image/jpeg;base64,{{userp.avatar}}');"></div>
 
             </div>
-            <div class="light1">{{userp.name}}</div>
-            <div class="meucu">{{userp.age}} anos</div>
+            <div class="ovocru">
+              <div class="light1">{{userp.name}}</div>
+              <div class="district">{{userp.district}}, {{userp.city}}</div>
+              <div class="meucu">{{userp.age}} anos</div>
+            </div>
             <div class="description">{{userp.description}}</div>
-            <div class="district">{{userp.district}}, {{userp.city}}</div>
             <div class="tabs tabs-light tabs-icon-only static ">
               <a class="tab-item">
                   <i ng-if="userp.locations[0]" class="icon mcfly" style="background-image: url('{{userp.locations[0].image}}');"></i>

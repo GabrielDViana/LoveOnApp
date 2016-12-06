@@ -3,7 +3,7 @@
   </ion-nav-bar>
   <ion-content>
 
-    <label class="item item-input">
+    <label ng-if="locations.length > 0"class="item item-input">
       <i class="icon ion-search placeholder-icon"></i>
       <input type="text" placeholder="Buscar" ng-model="search.name">
     </label>

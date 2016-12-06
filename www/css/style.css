@@ -77,8 +77,8 @@
 
 .description {
   position: absolute;
-  top: 227px;
-  margin-left: 10%;
+  margin-top: 225px;
+  margin-left: 25px;
   text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
@@ -254,11 +254,7 @@
 }
 
 .meucu {
-  padding: 130px 20px;
   font-size: 16pt;
-  position: absolute;
-  top: 46px;
-  left:135px;
   text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
@@ -273,22 +269,20 @@
 }
 
 .ovocru {
-
+  position: absolute;
+  margin-top: 10vh;
+  margin-left: 150px;
 }
 
 .light1 {
-  padding: 130px 20px;
+  margin-top: 50px;
+  padding: 10px 0px;
   font-size: 18pt;
-  position: relative;
-  top: 0px;
-  left:133px;
   text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
 .district {
-  position: absolute;
-  top: 155px;
-  margin-left: 155px;
+  /*position: absolute;*/
   text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 }
 
