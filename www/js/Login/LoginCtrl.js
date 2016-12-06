@@ -78,7 +78,6 @@ angular.module('starter')
             );
             console.log("Usr:", serviceRegisterSocial.getUser());
             factoryRegister.save(serviceRegisterSocial.getUser(), function(user) {
-              $ionicLoading.hide();
               var user ={};
               user.email = serviceRegisterSocial.getUser().email;
               user.id_social = serviceRegisterSocial.getUser().id_social;
@@ -90,7 +89,6 @@ angular.module('starter')
               user.id_social = serviceRegisterSocial.getUser().id_social;
               user.password = serviceRegisterSocial.getUser().password;
               $scope.loginEmail(user,"Google");
-              $ionicLoading.hide();
             });
             console.log("User:", $rootScope.user);
           }, 3500);
@@ -136,7 +134,6 @@ angular.module('starter')
               );
               console.log("Usr:", serviceRegisterSocial.getUser());
               factoryRegister.save(serviceRegisterSocial.getUser(), function(user) {
-                $ionicLoading.hide();
                 var user ={};
                 user.email = serviceRegisterSocial.getUser().email;
                 user.id_social = serviceRegisterSocial.getUser().id_social;
@@ -148,7 +145,6 @@ angular.module('starter')
                 user.id_social = serviceRegisterSocial.getUser().id_social;
                 user.password = serviceRegisterSocial.getUser().password;
                 $scope.loginEmail(user, "Facebook");
-                $ionicLoading.hide();
               });
             }, 3500);
           }

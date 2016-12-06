@@ -18,10 +18,10 @@ angular.module('starter')
     origin = {};
     origin.latitude = $rootScope.lat;
     origin.longitude = $rootScope.long;
-    $ionicPopup.alert({
-      title: 'Info!',
-      template: 'Latitude: '+$rootScope.lat +'\n Longitude' +$rootScope.long
-    });
+    // $ionicPopup.alert({
+    //   title: 'Info!',
+    //   template: 'Latitude: '+$rootScope.lat +'\n Longitude' +$rootScope.long
+    // });
     factoryLocations.get({
       latitude:$rootScope.lat,
       longitude:$rootScope.long
@@ -106,28 +106,6 @@ angular.module('starter')
     $scope.currentPage++;
     $scope.pageSize = $scope.currentPage * DEFAULT_PAGE_SIZE_STEP;
   }
-
-  // $ionicPlatform.ready(function() {
-  //
-  //      var posOptions = {
-  //          enableHighAccuracy: true,
-  //          timeout: 3000,
-  //          maximumAge: 0
-  //      };
-  //      $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
-  //          $rootScope.lat  = position.coords.latitude;
-  //          $rootScope.long = position.coords.longitude;
-  //          $ionicLoading.hide();
-  //          console.log(position.coords);
-  //      }, function(err) {
-  //          $ionicLoading.hide();
-  //         //  $ionicPopup.alert({
-  //         //    title: 'GPS não disponivel!',
-  //         //    template: 'Por favor, ligue seu GPS para que possamos mostrar os locais próximos.'
-  //         //  });
-  //          console.log(err);
-  //      });
-  //  });
 
   var posOptions = {timeout: 10000, enableHighAccuracy: true};
   $cordovaGeolocation

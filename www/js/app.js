@@ -6,6 +6,25 @@ angular.module('starter', ['ionic', 'firebase', 'ngResource', 'ngCordova',
  .constant('URL', 'http://loversappserver.herokuapp.com')
 
 .run(function($ionicPlatform, $cordovaGeolocation, $rootScope, $ionicPopup) {
+  cordova.plugins.locationAccuracy.canRequest(function(canRequest){
+    if(canRequest){
+        cordova.plugins.locationAccuracy.request(function(){
+            console.log("Request successful");
+        }, function (error){
+            console.error("Request failed");
+            if(error){
+                // Android only
+                console.error("error code="+error.code+"; error message="+error.message);
+                if(error.code !== cordova.plugins.locationAccuracy.ERROR_USER_DISAGREED){
+                    if(window.confirm("Falha ao ligar seu GPS, deseja fazer isso manualmente?")){
+                        cordova.plugins.diagnostic.switchToLocationSettings();
+                    }
+                }
+            }
+        }, cordova.plugins.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY // iOS will ignore this
+        );
+      }
+  });
   $ionicPlatform.ready(function() {
      var posOptions = {
          enableHighAccuracy: true,
@@ -17,10 +36,6 @@ angular.module('starter', ['ionic', 'firebase', 'ngResource', 'ngCordova',
          $rootScope.long = position.coords.longitude;
          console.log(position.coords);
      }, function(err) {
-         $ionicPopup.alert({
-           title: 'GPS não disponivel!',
-           template: 'Por favor, ligue seu GPS para que possamos mostrar os locais próximos.'
-         });
          console.log(err);
      });
     if(window.cordova && window.cordova.plugins.Keyboard) {
